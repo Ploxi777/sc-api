@@ -407,7 +407,7 @@ function pickBestHistory(liveHistory, statsHistory) {
 
 function mergeDashboardData(liveData, statsData) {
   const referenceDate = getSafeDate(liveData?.updatedAt || statsData?.updatedAt);
-  const sourceSinceYear = toNumber(liveData?.sinceYear || statsData?.sinceYear) || 2016;
+  const sourceSinceYear = toNumber(liveData?.sinceYear || statsData?.sinceYear) || 2023;
 
   const bestHistory = pickBestHistory(liveData?.history, statsData?.history);
   const bestHistoryMeta =
@@ -444,7 +444,7 @@ function mergeDashboardData(liveData, statsData) {
     reposts: toNumber(liveData?.reposts ?? statsData?.reposts),
     downloads: toNumber(liveData?.downloads ?? statsData?.downloads),
     trackCount: toNumber(liveData?.trackCount ?? statsData?.trackCount),
-    artist: liveData?.artist || statsData?.artist || "AREKKUZZERA",
+    artist: liveData?.artist || statsData?.artist || "Ploxi",
     trackTitle:
       liveData?.trackTitle ||
       liveData?.title ||
@@ -560,7 +560,7 @@ function applyDashboardData(data) {
   const trackCount = toNumber(data.trackCount);
 
   elements.headlinePlays.textContent = full(totalPlays);
-  elements.sinceYear.textContent = String(data.sinceYear || 2016);
+  elements.sinceYear.textContent = String(data.sinceYear || 2023);
 
   elements.playsValue.textContent = full(totalPlays);
   elements.likesValue.textContent = full(likes);
@@ -575,7 +575,7 @@ function applyDashboardData(data) {
   elements.repostsChipValue.textContent = `${full(reposts)} reposts`;
   elements.downloadsChipValue.textContent = `${full(downloads)} download${downloads === 1 ? "" : "s"}`;
 
-  elements.artistName.textContent = data.artist || "AREKKUZZERA";
+  elements.artistName.textContent = data.artist || "Ploxi";
   elements.trackTitle.textContent = data.trackTitle || "All Tracks";
   elements.lastUpdate.textContent = formatDateTime(data.updatedAt);
 

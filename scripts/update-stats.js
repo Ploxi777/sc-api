@@ -2,10 +2,19 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const STATS_PATH = path.join(__dirname, "..", "stats.json");
-const PROXY_URL = process.env.PROXY_URL || "https://proxy-sc.vercel.app/api/dashboard";
+const PROXY_URL = process.env.PROXY_URL || "https://proxy-sc-kappa.vercel.app/api/dashboard";
 const REQUEST_TIMEOUT_MS = Number(process.env.REQUEST_TIMEOUT_MS || 15000);
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const DAY_MS = 24 * 60 * 60 * 1000;
+const BASELINE_SINCE_YEAR = 2023;
+const BASELINE_SNAPSHOTS = [
+  { key: "2023-Jan-1", year: "2023", month: "Jan", day: "1", total: 0 },
+  { key: "2024-Jan-1", year: "2024", month: "Jan", day: "1", total: 0 },
+  { key: "2025-Jan-1", year: "2025", month: "Jan", day: "1", total: 147 },
+  { key: "2026-Jan-1", year: "2026", month: "Jan", day: "1", total: 16027 },
+  { key: "2026-Apr-24", year: "2026", month: "Apr", day: "24", total: 23423 }
+];
+const BASELINE_TOTAL = Math.max(...BASELINE_SNAPSHOTS.map((snapshot) => snapshot.total));
 
 function toNumber(value) {
   const numeric = Number(value);
@@ -72,18 +81,33 @@ function normalizeSnapshot(snapshot) {
 }
 
 function normalizeSnapshots(snapshots) {
-  return (Array.isArray(snapshots) ? snapshots : [])
+  const byKey = new Map();
+
+  for (const snapshot of (Array.isArray(snapshots) ? snapshots : [])) {
+    const normalized = normalizeSnapshot(snapshot);
+    if (!normalized) continue;
+
+    const existing = byKey.get(normalized.key);
+    byKey.set(normalized.key, existing
+      ? { ...normalized, total: Math.max(existing.total, normalized.total) }
+      : normalized);
+  }
+
+  return Array.from(byKey.values())
     .map(normalizeSnapshot)
     .filter(Boolean)
     .sort((a, b) => getUtcDateFromSnapshot(a) - getUtcDateFromSnapshot(b));
 }
 
 function upsertSnapshot(snapshots, nextSnapshot) {
-  const normalized = normalizeSnapshots(snapshots);
+  const normalized = normalizeSnapshots([...BASELINE_SNAPSHOTS, ...(Array.isArray(snapshots) ? snapshots : [])]);
   const existingIndex = normalized.findIndex((item) => item.key === nextSnapshot.key);
 
   if (existingIndex >= 0) {
-    normalized[existingIndex] = nextSnapshot;
+    normalized[existingIndex] = {
+      ...nextSnapshot,
+      total: Math.max(normalized[existingIndex].total, nextSnapshot.total)
+    };
   } else {
     normalized.push(nextSnapshot);
   }
@@ -136,9 +160,19 @@ function buildHistory(snapshots, nowParts) {
     }
   }
 
-  const yearly = Array.from(yearlyTotals.entries())
-    .sort((a, b) => Number(a[0]) - Number(b[0]))
-    .map(([label, plays]) => ({ label, plays }));
+  const startYear = Math.min(
+    BASELINE_SINCE_YEAR,
+    ...Array.from(yearlyTotals.keys()).map((year) => Number(year)),
+    Number(nowParts.year)
+  );
+  const endYear = Math.max(
+    ...Array.from(yearlyTotals.keys()).map((year) => Number(year)),
+    Number(nowParts.year)
+  );
+  const yearly = Array.from({ length: endYear - startYear + 1 }, (_, index) => {
+    const label = String(startYear + index);
+    return { label, plays: yearlyTotals.get(label) || 0 };
+  });
 
   const monthly = MONTHS.map((label) => ({
     label,
@@ -201,16 +235,32 @@ function mainTrackTitle(apiData, stats) {
 }
 
 function mainArtist(apiData, stats) {
-  return apiData.artist || stats.artist || "AREKKUZZERA";
+  return apiData.artist || stats.artist || "Ploxi";
 }
 
 function pickTracks(tracks) {
   return Array.isArray(tracks) ? tracks.slice(0, 6) : [];
 }
 
+function getCompatibleSnapshots(stats) {
+  const snapshots = normalizeSnapshots(stats.snapshots);
+  const maxTotal = snapshots.reduce((max, snapshot) => Math.max(max, snapshot.total), 0);
+  const artist = String(stats.artist || "").toLowerCase();
+
+  if (artist && artist !== "ploxi") {
+    return [];
+  }
+
+  if (maxTotal > BASELINE_TOTAL * 10) {
+    return [];
+  }
+
+  return snapshots;
+}
+
 async function main() {
   const apiData = await fetchDashboard();
-  const currentTotal = toNumber(apiData.playback_count);
+  const currentTotal = Math.max(toNumber(apiData.playback_count), BASELINE_TOTAL);
   const stats = readStats();
   const nowParts = getUtcParts();
   const todayKey = `${nowParts.year}-${nowParts.month}-${nowParts.day}`;
@@ -223,10 +273,10 @@ async function main() {
     total: currentTotal
   };
 
-  const snapshots = upsertSnapshot(stats.snapshots, nextSnapshot);
+  const snapshots = upsertSnapshot(getCompatibleSnapshots(stats), nextSnapshot);
   const history = buildHistory(snapshots, nowParts);
 
-  stats.sinceYear = toNumber(stats.sinceYear) || (snapshots[0] ? Number(snapshots[0].year) : Number(nowParts.year));
+  stats.sinceYear = BASELINE_SINCE_YEAR;
   stats.snapshots = snapshots;
   stats.history = {
     yearly: history.yearly,

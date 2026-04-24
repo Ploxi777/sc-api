@@ -1,228 +1,79 @@
 {
-  "sinceYear": 2016,
-  "lastTotal": 1767770,
-  "lastTrackTitle": "AREKKUZZERA — All Tracks",
+  "sinceYear": 2023,
+  "lastTotal": 23423,
+  "lastTrackTitle": "Ploxi — All Tracks",
   "snapshots": [
     {
-      "key": "2026-Mar-28",
-      "year": "2026",
-      "month": "Mar",
-      "day": "28",
-      "total": 1735689
-    },
-    {
-      "key": "2026-Mar-29",
-      "year": "2026",
-      "month": "Mar",
-      "day": "29",
-      "total": 1736932
-    },
-    {
-      "key": "2026-Mar-30",
-      "year": "2026",
-      "month": "Mar",
-      "day": "30",
-      "total": 1738068
-    },
-    {
-      "key": "2026-Mar-31",
-      "year": "2026",
-      "month": "Mar",
-      "day": "31",
-      "total": 1739312
-    },
-    {
-      "key": "2026-Apr-1",
-      "year": "2026",
-      "month": "Apr",
+      "key": "2023-Jan-1",
+      "year": "2023",
+      "month": "Jan",
       "day": "1",
-      "total": 1740527
+      "total": 0
     },
     {
-      "key": "2026-Apr-2",
-      "year": "2026",
-      "month": "Apr",
-      "day": "2",
-      "total": 1741733
+      "key": "2024-Jan-1",
+      "year": "2024",
+      "month": "Jan",
+      "day": "1",
+      "total": 0
     },
     {
-      "key": "2026-Apr-3",
-      "year": "2026",
-      "month": "Apr",
-      "day": "3",
-      "total": 1742998
+      "key": "2025-Jan-1",
+      "year": "2025",
+      "month": "Jan",
+      "day": "1",
+      "total": 147
     },
     {
-      "key": "2026-Apr-4",
+      "key": "2026-Jan-1",
       "year": "2026",
-      "month": "Apr",
-      "day": "4",
-      "total": 1744332
-    },
-    {
-      "key": "2026-Apr-5",
-      "year": "2026",
-      "month": "Apr",
-      "day": "5",
-      "total": 1745476
-    },
-    {
-      "key": "2026-Apr-6",
-      "year": "2026",
-      "month": "Apr",
-      "day": "6",
-      "total": 1746317
-    },
-    {
-      "key": "2026-Apr-7",
-      "year": "2026",
-      "month": "Apr",
-      "day": "7",
-      "total": 1747447
-    },
-    {
-      "key": "2026-Apr-8",
-      "year": "2026",
-      "month": "Apr",
-      "day": "8",
-      "total": 1748509
-    },
-    {
-      "key": "2026-Apr-9",
-      "year": "2026",
-      "month": "Apr",
-      "day": "9",
-      "total": 1749625
-    },
-    {
-      "key": "2026-Apr-10",
-      "year": "2026",
-      "month": "Apr",
-      "day": "10",
-      "total": 1750747
-    },
-    {
-      "key": "2026-Apr-11",
-      "year": "2026",
-      "month": "Apr",
-      "day": "11",
-      "total": 1751973
-    },
-    {
-      "key": "2026-Apr-12",
-      "year": "2026",
-      "month": "Apr",
-      "day": "12",
-      "total": 1753178
-    },
-    {
-      "key": "2026-Apr-13",
-      "year": "2026",
-      "month": "Apr",
-      "day": "13",
-      "total": 1754126
-    },
-    {
-      "key": "2026-Apr-14",
-      "year": "2026",
-      "month": "Apr",
-      "day": "14",
-      "total": 1755319
-    },
-    {
-      "key": "2026-Apr-15",
-      "year": "2026",
-      "month": "Apr",
-      "day": "15",
-      "total": 1756483
-    },
-    {
-      "key": "2026-Apr-16",
-      "year": "2026",
-      "month": "Apr",
-      "day": "16",
-      "total": 1757770
-    },
-    {
-      "key": "2026-Apr-17",
-      "year": "2026",
-      "month": "Apr",
-      "day": "17",
-      "total": 1759032
-    },
-    {
-      "key": "2026-Apr-18",
-      "year": "2026",
-      "month": "Apr",
-      "day": "18",
-      "total": 1760342
-    },
-    {
-      "key": "2026-Apr-19",
-      "year": "2026",
-      "month": "Apr",
-      "day": "19",
-      "total": 1761533
-    },
-    {
-      "key": "2026-Apr-20",
-      "year": "2026",
-      "month": "Apr",
-      "day": "20",
-      "total": 1762783
-    },
-    {
-      "key": "2026-Apr-21",
-      "year": "2026",
-      "month": "Apr",
-      "day": "21",
-      "total": 1764056
-    },
-    {
-      "key": "2026-Apr-22",
-      "year": "2026",
-      "month": "Apr",
-      "day": "22",
-      "total": 1765343
-    },
-    {
-      "key": "2026-Apr-23",
-      "year": "2026",
-      "month": "Apr",
-      "day": "23",
-      "total": 1766620
+      "month": "Jan",
+      "day": "1",
+      "total": 16027
     },
     {
       "key": "2026-Apr-24",
       "year": "2026",
       "month": "Apr",
       "day": "24",
-      "total": 1767770
+      "total": 23423
     }
   ],
   "history": {
     "yearly": [
       {
+        "label": "2023",
+        "plays": 0
+      },
+      {
+        "label": "2024",
+        "plays": 147
+      },
+      {
+        "label": "2025",
+        "plays": 15880
+      },
+      {
         "label": "2026",
-        "plays": 32081
+        "plays": 7396
       }
     ],
     "monthly": [
       {
         "label": "Jan",
-        "plays": 0
+        "plays": 2046
       },
       {
         "label": "Feb",
-        "plays": 0
+        "plays": 1840
       },
       {
         "label": "Mar",
-        "plays": 4838
+        "plays": 2015
       },
       {
         "label": "Apr",
-        "plays": 27243
+        "plays": 1495
       },
       {
         "label": "May",
@@ -260,95 +111,95 @@
     "daily": [
       {
         "label": "1",
-        "plays": 1206
+        "plays": 65
       },
       {
         "label": "2",
-        "plays": 1265
+        "plays": 65
       },
       {
         "label": "3",
-        "plays": 1334
+        "plays": 65
       },
       {
         "label": "4",
-        "plays": 1144
+        "plays": 65
       },
       {
         "label": "5",
-        "plays": 841
+        "plays": 65
       },
       {
         "label": "6",
-        "plays": 1130
+        "plays": 65
       },
       {
         "label": "7",
-        "plays": 1062
+        "plays": 65
       },
       {
         "label": "8",
-        "plays": 1116
+        "plays": 65
       },
       {
         "label": "9",
-        "plays": 1122
+        "plays": 65
       },
       {
         "label": "10",
-        "plays": 1226
+        "plays": 65
       },
       {
         "label": "11",
-        "plays": 1205
+        "plays": 65
       },
       {
         "label": "12",
-        "plays": 948
+        "plays": 65
       },
       {
         "label": "13",
-        "plays": 1193
+        "plays": 65
       },
       {
         "label": "14",
-        "plays": 1164
+        "plays": 65
       },
       {
         "label": "15",
-        "plays": 1287
+        "plays": 65
       },
       {
         "label": "16",
-        "plays": 1262
+        "plays": 65
       },
       {
         "label": "17",
-        "plays": 1310
+        "plays": 65
       },
       {
         "label": "18",
-        "plays": 1191
+        "plays": 65
       },
       {
         "label": "19",
-        "plays": 1250
+        "plays": 65
       },
       {
         "label": "20",
-        "plays": 1273
+        "plays": 65
       },
       {
         "label": "21",
-        "plays": 1287
+        "plays": 65
       },
       {
         "label": "22",
-        "plays": 1277
+        "plays": 65
       },
       {
         "label": "23",
-        "plays": 1150
+        "plays": 65
       },
       {
         "label": "24",
@@ -380,94 +231,94 @@
       }
     ]
   },
-  "playback_count": 1767770,
-  "trackTitle": "AREKKUZZERA — All Tracks",
-  "artist": "AREKKUZZERA",
+  "playback_count": 23423,
+  "trackTitle": "Ploxi — All Tracks",
+  "artist": "Ploxi",
   "tracks": [
     {
-      "id": 1510172020,
-      "title": "Psycho Dreams (HARDSTYLE REMIX)",
-      "playback_count": 396312,
-      "likes_count": 3843,
-      "comment_count": 53,
-      "reposts_count": 30,
+      "id": 2083756983,
+      "title": "не выкупаю HARDSTYLE (feat. atara333)",
+      "playback_count": 5026,
+      "likes_count": 65,
+      "comment_count": 3,
+      "reposts_count": 5,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/psycho-dreams-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-iEtcmU2ryYqwMtIJ-1qVMgA-large.jpg",
-      "created_at": "2023-05-09T11:59:13Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/zahulkahardstyle",
+      "artwork_url": "https://i1.sndcdn.com/artworks-52tbab5hEbOWgL9C-koIrUw-large.jpg",
+      "created_at": "2025-04-23T16:08:45Z"
     },
     {
-      "id": 1624227204,
-      "title": "Angel Vox - возвращайся (HARDSTYLE REMIX)",
-      "playback_count": 318955,
-      "likes_count": 3785,
-      "comment_count": 65,
-      "reposts_count": 53,
+      "id": 2137145328,
+      "title": "Ты меня не ищи Hardstyle",
+      "playback_count": 4654,
+      "likes_count": 43,
+      "comment_count": 6,
+      "reposts_count": 7,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/angel-vox-vozvrashchaysya-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-LWfre5LHJDb7b3Yy-owXeKg-large.jpg",
-      "created_at": "2023-09-24T14:04:21Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/ty-menya-ne-ishchi-hardstyle",
+      "artwork_url": "https://i1.sndcdn.com/artworks-OwUFfbofTSyYTfTJ-nVECQg-large.png",
+      "created_at": "2025-07-27T01:24:07Z"
     },
     {
-      "id": 1665544803,
-      "title": "zhanulka – ты похож на кота (HARDSTYLE REMIX)",
-      "playback_count": 147132,
-      "likes_count": 1429,
-      "comment_count": 34,
-      "reposts_count": 23,
+      "id": 2080572450,
+      "title": "Hate (HARDTEKK)",
+      "playback_count": 4652,
+      "likes_count": 72,
+      "comment_count": 3,
+      "reposts_count": 5,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/zhanulka-ty-pokhozh-na-kota-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-Yqnn5cpukI3Qebod-Nvfi7g-large.jpg",
-      "created_at": "2023-11-15T13:36:38Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/hate-hardtekk",
+      "artwork_url": "https://i1.sndcdn.com/artworks-YB2sexSKIjwXlRqD-AlzQLw-large.jpg",
+      "created_at": "2025-04-17T16:27:30Z"
     },
     {
-      "id": 1710205407,
-      "title": "VIOLENT VIRA - I Don’t Care (HARDSTYLE REMIX)",
-      "playback_count": 130999,
-      "likes_count": 1554,
-      "comment_count": 13,
-      "reposts_count": 27,
+      "id": 2107212624,
+      "title": "tv sex - snow strippers Hardstyle",
+      "playback_count": 4538,
+      "likes_count": 76,
+      "comment_count": 6,
+      "reposts_count": 4,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/violent-vira-i-dont-care-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-R9iz3SZht9pHeuy2-N8F01Q-large.jpg",
-      "created_at": "2024-01-06T16:59:06Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/tvsexsnow",
+      "artwork_url": "https://i1.sndcdn.com/artworks-biy1HiT29CL0uoLS-FjATcw-large.png",
+      "created_at": "2025-06-03T20:43:55Z"
     },
     {
-      "id": 1518557188,
-      "title": "Пошлая Молли - ТМСТС (HARDSTYLE REMIX)",
-      "playback_count": 91391,
-      "likes_count": 807,
-      "comment_count": 13,
-      "reposts_count": 15,
+      "id": 2157841812,
+      "title": "Ты разбила папину машину Hardstyle",
+      "playback_count": 2138,
+      "likes_count": 32,
+      "comment_count": 4,
+      "reposts_count": 2,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/tmsts-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-c3DLw3gILKFh9aHB-BFk01A-large.jpg",
-      "created_at": "2023-05-20T18:25:59Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/ty-razbila-papinu-mashinu-hardstyle",
+      "artwork_url": "https://i1.sndcdn.com/artworks-wp7mjWReqnZiRH58-gUWySg-large.png",
+      "created_at": "2025-08-22T23:10:21Z"
     },
     {
-      "id": 1436304634,
-      "title": "Badda Boo - Искренности (DUMBZZERA HARDSTYLE REMIX)",
-      "playback_count": 36995,
-      "likes_count": 371,
-      "comment_count": 12,
-      "reposts_count": 3,
+      "id": 2305726793,
+      "title": "u were mine hardtekk",
+      "playback_count": 1331,
+      "likes_count": 61,
+      "comment_count": 3,
+      "reposts_count": 4,
       "download_count": 0,
-      "permalink_url": "https://soundcloud.com/arekkuzzera/stepen-iskrennosti-dumbzzera-hardstyle-remix",
-      "artwork_url": "https://i1.sndcdn.com/artworks-tHqcxpQ4tsYIWoCb-Cy49fQ-large.jpg",
-      "created_at": "2023-01-31T04:02:26Z"
+      "permalink_url": "https://soundcloud.com/ploxiii/minewish",
+      "artwork_url": "https://i1.sndcdn.com/artworks-IhvGRSsKHA6PHifT-gSggtg-large.png",
+      "created_at": "2026-04-20T07:12:20Z"
     }
   ],
   "historyMeta": {
-    "yearlyStart": "2026",
+    "yearlyStart": "2023",
     "yearlyEnd": "2026",
     "monthlyYear": "2026",
     "dailyYear": "2026",
     "dailyMonth": "Apr"
   },
-  "likes": 18934,
-  "comments": 370,
-  "reposts": 377,
-  "downloads": 2,
-  "trackCount": 46,
-  "updatedAt": "2026-04-24T02:56:21.849Z"
+  "likes": 374,
+  "comments": 29,
+  "reposts": 29,
+  "downloads": 0,
+  "trackCount": 8,
+  "updatedAt": "2026-04-24T19:18:46.198Z"
 }
